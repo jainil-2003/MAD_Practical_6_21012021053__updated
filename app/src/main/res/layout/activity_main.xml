@@ -6,29 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="MP 3 Player"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView3"
         android:layout_width="400dp"
         android:layout_height="250dp"
-        app:cardCornerRadius="20dp"
         android:layout_marginLeft="5dp"
-        app:layout_goneMarginRight="5dp"
-        android:layout_marginTop="50dp"
+        app:cardCornerRadius="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        app:layout_goneMarginRight="5dp"
+        tools:layout_editor_absoluteY="111dp">
 
         <ImageView
             android:layout_width="match_parent"
@@ -64,12 +50,13 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/floatingActionButton9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginBottom="52dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="76dp"
                 android:backgroundTint="#959292"
                 android:clickable="true"
                 android:src="@drawable/baseline_shuffle_24"
@@ -77,60 +64,75 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
-
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/floatingActionButton10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="72dp"
-                android:layout_marginBottom="52dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginBottom="72dp"
                 android:backgroundTint="#959292"
                 android:clickable="true"
                 android:src="@drawable/baseline_skip_previous_24"
                 app:fabCustomSize="55dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toEndOf="@+id/floatingActionButton9" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/floatingActionButton11"
+                android:id="@+id/playbtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="152dp"
-                android:layout_marginBottom="52dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="64dp"
                 android:backgroundTint="#B52626"
                 android:clickable="true"
                 android:src="@drawable/baseline_play_arrow_24"
                 app:fabCustomSize="70dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintStart_toEndOf="@+id/floatingActionButton10" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/floatingActionButton12"
+                android:id="@+id/stopbtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
-                android:layout_marginBottom="52dp"
+                android:layout_marginBottom="76dp"
                 android:backgroundTint="#959292"
                 android:clickable="true"
                 android:src="@drawable/baseline_stop_24"
                 app:fabCustomSize="40dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/floatingActionButton" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/floatingActionButton13"
+                android:id="@+id/floatingActionButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="84dp"
-                android:layout_marginBottom="52dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="72dp"
                 android:backgroundTint="#959292"
                 android:clickable="true"
                 app:fabCustomSize="55dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:srcCompat="@drawable/baseline_stop_24" />
+                app:layout_constraintStart_toEndOf="@+id/playbtn"
+                app:srcCompat="@drawable/baseline_skip_next_24" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="116dp"
+        android:text="Mp 3 Player"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/materialCardView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.393" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
